@@ -48,12 +48,14 @@ div{ border: 1px solid black}
 .col2 > div{
     height: 50%;
     display: flex;
+    
 }
 
 /* 2행 2열 내부 열(column)*/
 .col2 > div > div{
     width: 50%;
     height: 100%;   
+    
 
 }
 

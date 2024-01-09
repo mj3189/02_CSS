@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제</title>
+    <link rel="stylesheet" href="../css/과제.css">
+    <script src="https://kit.fontawesome.com/22b3e25596.js" crossorigin="anonymous"></script>
+    
+    <style>
+
+
+
+         .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card-item {
+            width: 23%; /* 한 줄에 4개씩 배치하기 위해 너비 조절 */
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-thumbnail {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            padding: 15px;
+            margin: 0;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+        }
+
+        #searchQuery {
+            width: 300px; /* 검색창의 가로 크기 조절 */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 2px; /* 검색창의 둥근 테두리 조절 */
+            outline: none;
+        }
+
+        #searchButton {
+            background-color: #fff; /* 검색 버튼의 배경색 */
+            border: 1px solid #ccc;
+            padding: 8px 16px;
+            border-radius: 2px; /* 검색 버튼의 둥근 테두리 조절 */
+            cursor: pointer;
+        }
+
+        #searchButton:hover {
+            background-color: #f8f8f8; /* 마우스 호버 시 배경색 변경 */
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9; /* 배경색 조절 */
+        }
+
+        aside {
+            width: 240px; /* 사이드바의 너비 조절 */
+            height: 100vh; /* 화면 높이만큼 사이드바의 높이 조절 */
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #fff; /* 사이드바 배경색 조절 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+            overflow-y: auto; /* 내용이 넘칠 경우 스크롤 표시 */
+        }
+
+        nav {
+            padding: 20px;
+        }
+
+        .sidebar-item {
+            margin-bottom: 15px;
+        }
+
+        .sidebar-item a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar-item a:hover {
+            background-color: #f0f0f0; /* 마우스 호버 시 배경색 변경 */
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        
+        <section class="header-container">
+            
+            <div class="header-container-left">
+                
+                <a href="#" class="logo">
+                    
+                    
+                </a>
+                <i class="fa-solid fa-bars"></i>
+                <img src="../images/11111.png" alt="로고 이미지">
+
+            </div>
+
+            <form method="get" target="_blank">
+                <label for="searchQuery"></label>
+                <input type="text" id="searchQuery" name="search_query" size="70" placeholder="검색어를 입력하세요">
+                <input type="submit" id="searchButton" value="검색">
+            </form>
+            
+            <div class="header-container-right">
+                <a href="#">로그인</a>
+                
+
+            </div>
+        </section>
+    </header>
+
+    
+
+
+    <!-- navigator -->
+    <nav>
+         <ul class="navbar">
+                <li> <a href="#">전체</a> </li>
+                <li> <a href="#">음악</a> </li>
+                <li> <a href="#">실시간</a> </li>
+                <li> <a href="#">게임</a> </li>
+                <li> <a href="#">믹스</a> </li>
+                <li> <a href="#">요리</a> </li>
+                <li> <a href="#">최근에 감상한 영상</a> </li>
+                <li> <a href="#">업로드 된 영상</a> </li>
+                <li> <a href="#">새로운 맞춤 영상</a> </li>
+        </ul>
+      </nav>
+
+
+
+
+      <main>
+        <aside class="aside1">
+            <nav>
+                <div class="sidebar-item">
+                    <a href="#">홈</a>
+                </div>
+                <div class="sidebar-item">
+                    <a href="#">인기</a>
+                </div>
+                <div class="sidebar-item">
+                    <a href="#">구독</a>
+                </div>
+                <div class="sidebar-item">
+                    <a href="#">YouTube Premium</a>
+                </div>
+                <!-- 다른 항목들을 필요에 따라 추가할 수 있습니다 -->
+            </nav>
+        </aside>
+
+
+
+
+
+        <main>
+        <div class="content-row card-container">
+
+            <div class="card-item">
+                <a href="#" class="card">
+                    <div class="card-thumbnail container">
+                        <img class="card-thumbnail" src="../images/새 폴더/1.jpg" alt="카드 썸네일">
+                    </div>
+    
+                    
+    
+                </a>
+            </div>
+    
+            <div class="card-item">
+                <a href="#" class="card">
+                    <div class="card-thumbnail container">
+                        <img class="card-thumbnail" src="../images/새 폴더/2.jpg" alt="카드 썸네일">
+                    </div>
+    
+                    
+    
+                </a>
+            </div>
+    
+    
+            <div class="card-item">
+                <a href="#" class="card">
+                    <div class="card-thumbnail container">
+                        <img class="card-thumbnail" src="../images/새 폴더/3.jpg" alt="카드 썸네일">
+                    </div>
+    
+                    
+    
+                </a>
+            </div>
+    
+    
+            <div class="card-item">
+                <a href="#" class="card">
+                    <div class="card-thumbnail container">
+                        <img class="card-thumbnail" src="../images/새 폴더/4.jpg" alt="카드 썸네일">
+                    </div>
+    
+                    
+    
+                </a>
+            </div>
+    
+            <div class="card-item">
+                <a href="#" class="card">
+                    <div class="card-thumbnail container">
+                        <img class="card-thumbnail" src="../images/새 폴더/5.jpg" alt="카드 썸네일">
+                    </div>
+    
+                    
+    
+                </a>
+            </div>
+    
+            <div class="card-item">
+                <a href="#" class="card">
+                    <div class="card-thumbnail container">
+                        <img class="card-thumbnail" src="../images/새 폴더/6.jpg" alt="카드 썸네일">
+                    </div>
+    
+                    
+    
+                </a>
+            </div>
+    
+            <div class="card-item">
+                <a href="#" class="card">
+                    <div class="card-thumbnail container">
+                        <img class="card-thumbnail" src="../images/새 폴더/7.jpg" alt="카드 썸네일">
+                    </div>
+    
+                    
+    
+                </a>
+            </div>
+    
+            <div class="card-item">
+                <a href="#" class="card">
+                    <div class="card-thumbnail container">
+                        <img class="card-thumbnail" src="../images/새 폴더/8.jpg" alt="카드 썸네일">
+                    </div>
+    
+                    
+    
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a href="#" class="card">
+                    <div class="card-thumbnail container">
+                        <img class="card-thumbnail" src="../images/새 폴더/9.jpg" alt="카드 썸네일">
+                    </div>
+    
+                    
+    
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a href="#" class="card">
+                    <div class="card-thumbnail container">
+                        <img class="card-thumbnail" src="../images/새 폴더/10.jpg" alt="카드 썸네일">
+                    </div>
+    
+                    
+    
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a href="#" class="card">
+                    <div class="card-thumbnail container">
+                        <img class="card-thumbnail" src="../images/새 폴더/11.jpg" alt="카드 썸네일">
+                    </div>
+    
+                    
+    
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a href="#" class="card">
+                    <div class="card-thumbnail container">
+                        <img class="card-thumbnail" src="../images/새 폴더/12.jpg" alt="카드 썸네일">
+                    </div>
+    
+                    
+    
+                </a>
+            </div>
+    
+    
+        </div>
+    
+      
+          </section>
+        </main>
+      </main>
+
+
+
+
+      <footer></footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

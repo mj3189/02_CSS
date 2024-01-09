@@ -1,0 +1,268 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; 완성 시 삭제 예정 */
+}
+
+/* 아이콘의 크기를 조절 */
+.fa-bars {
+    font-size: 24px; /* 원하는 크기로 조절 */
+}
+
+/* 아이콘의 위치를 조절 (예: 위쪽으로 5px, 왼쪽으로 10px 이동) */
+.fa-bars {
+    position: relative;
+    top: 20px;
+    left: -20px;
+    margin: 10px;
+}
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 15px 0; /* 상하 좌우 */
+    border-bottom: 2px solid var(--main-color);
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: 70px;
+    width: 100%;
+
+    /* 화면이 커져도 whith 최대 값은 1200px */
+    max-width: 1200px;
+}
+
+.fa-solid fa-bars{
+    display: flex;
+    width: 20%;
+    height: 50%;
+    position: sticky;
+    margin-left: 270px;
+}
+
+.header-container > div{
+    height: 90%;
+    display: flex;
+    align-items: center;
+}
+
+/* 헤더 왼쪽 모든 후손 요소 */
+.header-container-left *{
+    height: 100%;
+}
+
+/* 헤어 오른쪽 후손 a태그 */
+.header-container-right a{
+    font-weight: bold;    
+    color: var(--main-color);
+    font-size: 0.8em;  /* 0.8배 */
+    margin: 0 10px;
+}
+
+.aside{
+    background-color: gray;
+    
+    
+}
+
+nav {
+    background-color: #f0f0f0; /* 배경색 */
+    padding: 10px;
+    border-radius: 10px; /* 백그라운드의 둥근 테두리 */
+}
+
+nav {
+    background-color: #f0f0f0; /* 배경색 */
+    padding: 10px;
+    border-radius: 10px; /* 백그라운드의 둥근 테두리 */
+}
+
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333; /* 링크 텍스트 색상 */
+    position: relative;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #333; /* 백그라운드의 동그라미 색상 */
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.navbar a:hover::before {
+    opacity: 0;
+
+}
+
+/* 마우스가 a태그에 올라갔을 때 */
+.navbar > li > a:hover{
+    color: blue;
+
+}
+
+/* 메뉴 사이 구분선 추가 */
+.navbar > li:not(:last-child) >a{
+    border-right: 2px solid var(--main-color);
+}
+
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+    min-width: 800px; /* 최소 너비 800px */
+    max-width: 1440px; /* 최대 너비 1440px */
+    margin: auto;  /* 좌우 가운데 정렬 */
+           
+}
+
+/* 내용 행 */
+.content-row{
+border: 1px solid var(--main-color);
+border-radius: 20px; /* 테두리 모서리 둥글게 */
+padding : 30px;
+margin: 20px 0px 0px 250px;
+
+display: flex;
+
+/* content-row 내부에 작성되는 내용, 요소의 높이에 맞게 
+자동으로 content-row의 height가 지정될 수 있도록
+별도 설정을 하지 않음
+*/
+} 
+
+
+/* 썸네일 열 */
+.thumbnail-col{
+width: 400px;
+flex-shrink: 0;
+}
+
+/* 썸네일 이미지 */
+.thumbnail{
+width: 100%;
+height: auto; /* width 비율에 맞게 자동으로 height 조정 */
+}
+
+/* 설명 열 */
+.description-col{
+flex-grow: 1;
+padding: 20px;
+margin: 0 30px;
+}
+
+.description-col > h1:hover{ /* 제목 부분 */
+text-decoration: underline;
+}
+
+.description-col > hr{
+margin: 20px 0;
+}
+
+/* 내용 */
+.description-col > p{
+font-size: 20px;
+
+
+/* white-space : 텍스트 요소에서 공백을 처리하는 방법 설정 (많이 사용) */
+/* pre : 작성된 텍스트 모양 그대로 출력(pre 태그 처럼) */
+/* pre-wrap : pre + 텍스트가 요소의 너비를 초과하며 줄바꿈*/
+
+white-space: pre-wrap;
+}
+
+/* -------------카드 ---------------- */
+.card-container{
+/* 카드 다 만들고 나서 설정 */
+flex-wrap: wrap;
+padding-left: 0px;
+padding-right: 0px;
+}
+
+/* 카드를 감싸는 요소(flex의 item) */
+.card-item{
+flex-shrink: 0;
+width: 25%;
+min-width: 200px;
+padding: 15px;
+}
+
+/* 카드(a) 태그 */
+.card{
+display: block; /* bloack은 크기 조정이 된다 */
+
+}
+
+
+/* 카드 썸네일 */
+.card-thumbnail-container{
+height: 200px;
+padding-bottom: 10px;
+border-bottom: 1px solid var(--main-color);
+}
+
+.card-thumbnail{  /* img 태그 */
+width: 100%;
+height: 100%;
+
+/* object-fit : 이미지 요소의 내용(진짜 이미지)의 크기 조절 */
+/* cover: 이미지가 초과되는 부분을 안보이게함 */
+/* contain : 이미지 전체가 화면에 보여지도록 이미지 크기 조절 */
+/* object-fit : cover; */
+object-fit : contain;
+}
+
+.card-content{  /* p태그 */
+padding-top: 10px;
+white-space: pre-wrap;
+}
+
+
+/* 카드에 마우스가 올라왔을 때 후손 이미지(썸네일) 확대하기 */
+.card:hover .card-thumbnail{
+/* transform : 요소의 크기, 각도, 회전율 등을 변환/변형 */
+/* scale(숫자) : 숫자 만큼 요소의 크기를 변환(배율) */
+transform:scale(1.1)
+
+}
+
+
+.card-thumbnail{
+/* transition: 요소의 변환 시간, 속도 등을 조절하는 속성 */    
+/* transition-duration: 요소의 변환 시간 조절 */
+transition-duration: 0.25s;
+}
